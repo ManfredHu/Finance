@@ -1,0 +1,18 @@
+{
+  "name": "financial",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "echarts": "^3.8.5"
+  },
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "coverage",
+    "npm-debug.log",
+    ".DS_Store"
+  ]
+}
