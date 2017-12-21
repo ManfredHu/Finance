@@ -1,4 +1,4 @@
-var myChart = echarts.init(document.getElementById('rowLeftCenterLeft'));
+var myChart = echarts.init(document.getElementById('rowLeftCenterLeft'),'shine');
 // 指定图表的配置项和数据
 var option = {
      tooltip: {
@@ -10,7 +10,7 @@ var option = {
         {
             name:'访问来源',
             type:'pie',
-            radius: ['40%', '60%'],
+            radius: ['30%', '70%'],
             avoidLabelOverlap: false,
             label: {
 
@@ -51,9 +51,9 @@ var option = {
             data:[
                 
                 {value:100, name:'M端'},
+                {value:700, name:'PC'},
                 {value:150, name:'APP'},
-                {value:50, name:'内嵌'},
-                {value:700, name:'PC'}
+                {value:50, name:'内嵌'}
             ]
         }
     ]
