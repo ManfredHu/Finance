@@ -1,3 +1,17 @@
+let screen = document.body.clientWidth,
+    fontSize,
+    width,
+    length;
+// console.log(screen);
+if(screen > 2000) {
+    fontSize = '36';
+    width = 4;
+    length = 30;
+} else {
+    fontSize = '14';
+    width = 2;
+    length = 15;
+}
 var myChart = echarts.init(document.getElementById('rowLeftCenterLeft'),'shine');
 // 指定图表的配置项和数据
 var option = {
@@ -20,7 +34,9 @@ var option = {
                     // position: 'center',
                     textStyle: {
                         color: 'rgba(255, 255, 255, 0.9)',
-                        fontSize: '14',
+                        fontSize: fontSize,
+                        fontWeight: 'bold',
+
                     },
                     // rich: {
                     //     b: {
@@ -34,8 +50,8 @@ var option = {
                     show: true,
                     position: 'center',
                     textStyle: {
-                        fontSize: '14',
-                        // fontWeight: 'bold'
+                        fontSize: fontSize,
+                        fontWeight: 'bold',
                         color: 'rgba(255, 255, 255, 0.9)',
                     }
                 }
@@ -43,8 +59,19 @@ var option = {
             labelLine: {
                 normal: {
                     show: true,
+                    length: length,
                     lineStyle: {
                         // shadowOffsetY: '-10',
+                        width: width,
+                    }
+                },
+                emphasis: {
+                    show: true,
+                    position: 'center',
+                    length: length,
+                    textStyle: {
+                        width: width,
+                        
                     }
                 }
             },
@@ -75,3 +102,16 @@ myChart.on('mouseout', function (params) {
 });
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
+window.onresize = function(){
+    screen = document.body.clientWidth;
+    if(screen > 2000) {
+        fontSize = '30';
+        width = 4;
+        length = 8;
+    } else {
+        fontSize = '14';
+        width = 2;
+        length = 2;
+    }
+    myChart.resize();
+}
