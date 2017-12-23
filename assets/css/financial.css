@@ -239,7 +239,20 @@ small {
 
     flex-direction: column;
 }
+.value {
+    display: inline-block;
+    overflow: hidden;
 
+    width: 16px;
+    height: 23px;
+
+    font-size: 12px;
+    line-height: 23px;
+    text-indent: -9999em;
+
+    color: #fff;
+    background: url("../img/number.png") no-repeat 0 0;
+}
 /** head **/
 #header {
     position: relative;
@@ -256,6 +269,7 @@ small {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 #header h1 {
     float: left;
 
@@ -321,7 +335,7 @@ small {
 }
 /** end head **/
 /** main **/
-#main > div,    
+#main > div,
 #main {
     display:         flex;
     display: -webkit-flex;
@@ -333,14 +347,17 @@ small {
 }
 #main {
     padding: 20px;
+    height: 100%;
+    height:         calc(100% - 60px);
+    height: -webkit-calc(100% - 60px);
 
     flex-flow: row;
-    height: 100%;
 }
 .row-left {
     margin: 0 2em;
     width: 78%;
     height: 100%;
+
     flex-direction: column;
 }
 .row-right {
@@ -417,7 +434,9 @@ small {
 }
 
 .row-left-top-number {
+    display: block;
     /*margin: 0.5em 0 0 0;*/
+
     padding: 1em .5em 0 0;
 
     font-size: 300%;
@@ -686,8 +705,9 @@ small {
         font-size: 2em;
     }
     .row-right-top-context {
-        font-size: 146%;
         padding: 1em 0 0 0;
+
+        font-size: 146%;
     }
     .row-left-top li > div {
         bottom: -7%;
@@ -696,12 +716,12 @@ small {
         width: 38%;
     }
     .row-left-top-little {
-        font-size: 200%;
         /*padding: 1.5em 1em 0 0;*/
         padding: 1em 1em 0 0;
+
+        font-size: 200%;
     }
     .row-left-top li > div {
-
         bottom: -6%;
     }
     .row-left-top > ul > li {
@@ -713,7 +733,6 @@ small {
         height: 46px;
     }
     .row-left-top-little {
-
         font-size: 168%;
     }
     .row-left-top li > p > img {
@@ -740,49 +759,47 @@ small {
     .row-left-top-number {
         /* margin: 0.5em 0 0 0; */
         padding: 1em .5em 0 0;
-        font-size: 6em;
 
+        font-size: 510%;
     }
     .row-left-top-little {
-        font-size: 226%;
         padding: 1.5em 1em 0 0;
+
+        font-size: 226%;
     }
     .row-right-top-context-detial {
         /*margin: 0 0 0 1em;*/
-        width: 38%;
-        font-size: 200%;    
+        width: 50%;
+
+        font-size: 200%;
     }
     .row-right-top-context-number {
-            font-size: 330%;
+        font-size: 330%;
         font-weight: 600;
     }
     .row-right-top-context {
         padding: 1.5em 0 0 0;
-
     }
     .row-right-top ul li img {
-
         width: 70px;
         height: 70px;
     }
     .row-left-top li > div {
-
         bottom: -6%;
     }
     .row-right-top-title {
-            font-size: 210%;
+        font-size: 210%;
     }
     .row-left-top li > p > img {
-
         width: 16px;
-         height: 20px; 
+        height: 20px;
     }
     #header h1 {
-
         font-size: 30px;
     }
     #header {
         height: 100px;
+
         line-height: 100px;
     }
     .nav > ul > li {
@@ -791,17 +808,21 @@ small {
     }
     .nav li.active {
         line-height: 95px;
-
+    }
+    #main {
+        height: calc(100% - 100px);
+        /*height: -webkit-calc(100% - 100px);*/
     }
     .row-right-top > p {
         font-size: 255%;
     }
     .row-left-center-font {
-         font-size: 285%;
+        font-size: 285%;
     }
     .row-left-buttom .title {
-        font-size: 300%;
         border-left: 6px solid rgb(0, 92, 195);
+
+        font-size: 300%;
     }
 }
 
@@ -816,6 +837,7 @@ small {
     }
     #header {
         height: 120px;
+
         line-height: 120px;
     }
     #header h1 {
@@ -823,19 +845,21 @@ small {
     }
     .row-left-top li > div {
         bottom: -4%;
-
     }
     .row-left-top > ul > li {
         padding: 3em 0;
     }
     .row-left-top-number {
         padding: 1.5em .5em 0 0;
+
         font-size: 1000%;
     }
     .row-left-top-little {
         padding: 1em 1em 0 0;
+
+        font-size: 339%;
+
         color: #fff;
-            font-size: 339%;
     }
     .row-left-top li > p > img {
         width: 30px;
@@ -856,22 +880,28 @@ small {
     }
     .row-right-top-context {
         padding: 2em 0 0 0;
+
         font-size: 223%;
     }
     .row-right-top-context-detial {
         width: 40%;
+
         font-size: 148%;
     }
     .row-left-center-font {
         font-size: 446%;
     }
     .row-left-center-font p {
-        padding: 0.5em 20px;
+        padding: .5em 20px;
     }
     #header .back {
         margin-top: 24px;
         width: 60px;
         height: 66px;
+    }
+    #main {
+        height:         calc(100% - 120px);
+        height: -webkit-calc(100% - 120px);
     }
 }
 

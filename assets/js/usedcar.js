@@ -115,3 +115,31 @@ window.onresize = function(){
     }
     myChart.resize();
 }
+
+
+/**
+ * 滚动数字
+ */
+function dataStatistics (target, value) {
+        target.empty();
+        var span = target.find('span');
+        var localStr = value.toLocaleString();
+        var len = localStr.length;
+        for (var i = 0; i < len; i++) {
+            var number = localStr.charAt(i);
+            if (number === ',') {
+                number = 10;
+            }
+            var y = -parseInt(number) * 30; //y轴位置
+            if (span.length <= i) {
+                target.append('<span class="value"><ins style="display: none;">' + number + '</ins></span>'); // ' + number + '
+            }
+            var obj = target.find('span').eq(i);
+            obj.animate({ backgroundPosition: '(0 ' + y + 'px)' }, 4000, 'swing');
+        }
+}
+dataStatistics($('#rowLeftTopNumber1'), 1849398);
+dataStatistics($('#rowLeftTopNumber2'), 32424);
+dataStatistics($('#rowLeftTopNumber3'), 4995);
+dataStatistics($('#rowLeftTopNumber4'), 509239);
+dataStatistics($('#rowLeftTopNumber5'), 411696);
