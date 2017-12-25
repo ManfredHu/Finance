@@ -745,6 +745,12 @@ small {
 }
 
 @media (min-height:  1250px)   and  (max-height:  1440px) {
+    .value {
+        width: 24px;
+        height: 34px;
+        background: url(../img/number.png) no-repeat 0 0;
+        background-size: 34px 600px;
+    }
     #header .back {
         margin-top: 24px;
         width: 49px;
@@ -828,6 +834,11 @@ small {
 
 /*超宽4k屏*/
 @media (min-width: 3440px) and  (min-height:  1441px) and  (max-width:3841px) and  (max-height:  2160px) {
+    .value {
+        width: 40px;
+        height: 57px;
+        background-size: 57px 1000px;
+    }
     .nav li.active {
         line-height: 118px;
     }

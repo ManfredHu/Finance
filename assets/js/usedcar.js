@@ -120,7 +120,7 @@ window.onresize = function(){
 /**
  * 滚动数字
  */
-function dataStatistics (target, value) {
+function dataStatistics (target, value, rollY) {
         target.empty();
         var span = target.find('span');
         var localStr = value.toLocaleString();
@@ -130,7 +130,8 @@ function dataStatistics (target, value) {
             if (number === ',') {
                 number = 10;
             }
-            var y = -parseInt(number) * 30; //y轴位置
+            var y = -parseInt(number) * rollY; //y轴位置45
+            // var y = rollY;
             if (span.length <= i) {
                 target.append('<span class="value"><ins style="display: none;">' + number + '</ins></span>'); // ' + number + '
             }
@@ -138,8 +139,12 @@ function dataStatistics (target, value) {
             obj.animate({ backgroundPosition: '(0 ' + y + 'px)' }, 4000, 'swing');
         }
 }
-dataStatistics($('#rowLeftTopNumber1'), 1849398);
-dataStatistics($('#rowLeftTopNumber2'), 32424);
-dataStatistics($('#rowLeftTopNumber3'), 4995);
-dataStatistics($('#rowLeftTopNumber4'), 509239);
-dataStatistics($('#rowLeftTopNumber5'), 411696);
+
+//普通屏幕需要30
+//2k之类的屏需要45
+//4k屏需要75
+dataStatistics($('#rowLeftTopNumber1'), 1849398, 75);
+dataStatistics($('#rowLeftTopNumber2'), 32424, 75);
+dataStatistics($('#rowLeftTopNumber3'), 4995, 75);
+dataStatistics($('#rowLeftTopNumber4'), 509239, 75);
+dataStatistics($('#rowLeftTopNumber5'), 411696, 75);
