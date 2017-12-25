@@ -6,8 +6,8 @@ option = {
 	// 	// borderWidth: '1'
 	// },
 	grid: {
-        left: '0.5%',
-        right: '3%',
+        left: '0.1%',
+        right: '4%',
         bottom: '5%',
         top: '23%',
         containLabel: true,
@@ -22,7 +22,7 @@ option = {
         },
         axisLine: {
         	lineStyle: {
-        		color: '#162566'
+        		color: 'rgb(0, 92, 195)'
         	}
         },
         axisTick: {
@@ -37,7 +37,7 @@ option = {
     	splitLine: {
             show: true,
             lineStyle: {
-                color: '#162566',
+                color: 'rgb(0, 92, 195)',
             }
         },
     	axisLabel: {
@@ -48,7 +48,7 @@ option = {
         },
         axisLine: {
         	lineStyle: {
-        		color: '#162566'
+        		color: 'rgb(0, 92, 195)'
         	}
         },
         axisTick: {

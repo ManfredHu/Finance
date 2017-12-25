@@ -29,7 +29,7 @@ option = {
         },
         axisLine: {
             lineStyle: {
-                color: '#162566'
+                color: 'rgb(0, 92, 195)'
             }
         },
         axisTick: {
@@ -46,7 +46,7 @@ option = {
             show: true,
             interval: '1',
             lineStyle: {
-                color: '#162566',
+                color: 'rgb(0, 92, 195)',
             }
         },
 
@@ -57,7 +57,7 @@ option = {
         },
         axisLine: {
             lineStyle: {
-                color: '#162566'
+                color: 'rgb(0, 92, 195)'
             }
         },
         axisTick: {

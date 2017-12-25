@@ -114,6 +114,9 @@ window.onresize = function(){
         length = 2;
     }
     myChart.resize();
+    leftbtChart.resize();
+    leftbsChart.resize();
+    leftbfChart.resize();
 }
 
 

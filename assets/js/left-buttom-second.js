@@ -29,7 +29,7 @@ option = {
         },
         axisLine: {
         	lineStyle: {
-        		color: '#162566'
+        		color: 'rgb(0, 92, 195)'
         	}
         },
         axisTick: {
@@ -44,7 +44,7 @@ option = {
     	splitLine: {
             show: true,
             lineStyle: {
-                color: '#162566',
+                color: 'rgb(0, 92, 195)',
             }
         },
     	axisLabel: {
@@ -55,7 +55,7 @@ option = {
         },
         axisLine: {
         	lineStyle: {
-        		color: '#162566'
+        		color: 'rgb(0, 92, 195)'
         	}
         },
         axisTick: {
