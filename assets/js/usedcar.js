@@ -1,6 +1,8 @@
 let screen = document.body.clientWidth,
+    Height = document.body.clientHeight,
     fontSize,
     width,
+    Size,
     length;
 // console.log(screen);
 if(screen > 2000) {
@@ -15,7 +17,8 @@ if(screen > 2000) {
 var myChart = echarts.init(document.getElementById('rowLeftCenterLeft'),'shine');
 // 指定图表的配置项和数据
 var option = {
-     tooltip: {
+    
+    tooltip: {
         trigger: 'item',
         formatter: "{b}: {c} ({d}%)"
     },
@@ -102,6 +105,50 @@ myChart.on('mouseout', function (params) {
 });
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
+
+/**
+ * 滚动数字
+ */
+function dataStatistics (target, value, rollY, active) {
+        target.empty();
+        var span = target.find('span');
+        var localStr = value.toLocaleString();
+        var len = localStr.length;
+        for (var i = 0; i < len; i++) {
+            var number = localStr.charAt(i);
+            if (number === ',') {
+                number = 10;
+            }
+            var y = -parseInt(number) * rollY; //y轴位置45
+            // var y = rollY;
+            if (span.length <= i) {
+                target.append('<span class="' + active + '"><ins style="display: none;">' + number + '</ins></span>'); // ' + number + '
+            }
+            var obj = target.find('span').eq(i);
+            obj.animate({ backgroundPosition: '(0 ' + y + 'px)' }, 4000, 'swing');
+        }
+}
+
+//普通屏幕需要30
+//2k之类的屏需要45
+//4k屏需要75
+
+
+if(screen >= 1920 && screen <= 2560 && Height >= 1259) {
+    Size = 45;
+} else if(screen >= 2560) {
+    Size = 75;
+} else {
+    Size = 30;
+}
+
+dataStatistics($('#rowLeftTopNumber1'), 1849398, Size, "valueActive");
+dataStatistics($('#rowLeftTopNumber2'), 32424, Size, "value");
+dataStatistics($('#rowLeftTopNumber3'), 4995, Size, "value");
+dataStatistics($('#rowLeftTopNumber4'), 509239, Size, "value");
+dataStatistics($('#rowLeftTopNumber5'), 411696, Size, "value");
+
+
 window.onresize = function(){
     screen = document.body.clientWidth;
     if(screen > 2000) {
@@ -118,36 +165,3 @@ window.onresize = function(){
     leftbsChart.resize();
     leftbfChart.resize();
 }
-
-
-/**
- * 滚动数字
- */
-function dataStatistics (target, value, rollY) {
-        target.empty();
-        var span = target.find('span');
-        var localStr = value.toLocaleString();
-        var len = localStr.length;
-        for (var i = 0; i < len; i++) {
-            var number = localStr.charAt(i);
-            if (number === ',') {
-                number = 10;
-            }
-            var y = -parseInt(number) * rollY; //y轴位置45
-            // var y = rollY;
-            if (span.length <= i) {
-                target.append('<span class="value"><ins style="display: none;">' + number + '</ins></span>'); // ' + number + '
-            }
-            var obj = target.find('span').eq(i);
-            obj.animate({ backgroundPosition: '(0 ' + y + 'px)' }, 4000, 'swing');
-        }
-}
-
-//普通屏幕需要30
-//2k之类的屏需要45
-//4k屏需要75
-dataStatistics($('#rowLeftTopNumber1'), 1849398, 75);
-dataStatistics($('#rowLeftTopNumber2'), 32424, 75);
-dataStatistics($('#rowLeftTopNumber3'), 4995, 75);
-dataStatistics($('#rowLeftTopNumber4'), 509239, 75);
-dataStatistics($('#rowLeftTopNumber5'), 411696, 75);
