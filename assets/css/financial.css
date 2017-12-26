@@ -463,8 +463,6 @@ small {
 }
 .row-left-center-right {
     margin: 0 0 0 2em;
-
-    background-color: rgba(0,0,0,.5);
 }
 .row-left-center-font {
     display: table;
@@ -522,13 +520,30 @@ small {
 .row-left-buttom-first {
     width: 28%;
 }
-
+#row-left-center-right{
+    margin:0;
+    width: 100%;
+    height: 100%;
+}
 #row-left-buttom-first,
 #row-left-buttom-second,
-#row-left-buttom-third {
+#row-left-buttom-third, 
+#row-right-buttom{
     margin: 0 auto;
     width: 93%;
     height: 95%;
+}
+.row-right-buttom .title {
+    position: relative;
+    top: 10%;
+    left: 6%;
+
+    border-left: 3px solid rgb(0, 92, 195);
+    padding-left: 10px;
+
+    font-size: 18px;
+
+    color: white;
 }
 
 .row-left-buttom-second {
