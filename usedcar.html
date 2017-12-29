@@ -2,80 +2,70 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>文档标题</title>
-    
-    <!-- 360 使用Google Chrome Frame -->
-    <meta name="renderer" content="webkit">
-    
-    <!-- 优先使用 IE 最新版本和 Chrome -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
-    <!-- 开启响应式 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO页面关键词 -->
-    <meta name="keywords" content="your keywords">
-    
-    <!-- SEO页面描述 -->
-    <meta name="description" content="your description">
-    
-    <!-- favicon，可更改图片类型 -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" />
-    
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
     <!-- 重设css -->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/financial.css">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/usedcar.css">
 </head>
 <body>
-    <div id="container">
-        <div id="header">
-            <h1>之家罗盘</h1>
-            <div class="nav">
-                <span class="nav-bar" id="insideClick">≡</span>
-                <ul id="insideMenu">
-                    <li><a href="javascript:;">总览</a></li>
-                    <li><a href="javascript:;">资讯</a></li>
-                    <li><a href="financial.html">金融</a></li>
-                    <li><a href="javascript:;">经销商</a></li>
-                    <li><a href="javascript:;">电商</a></li>
-                    <li class="active"><a href="javascript:;">二手车</a></li>
-                    <li><a href="javascript:;">用户中心</a></li>
-                    <li><a href="javascript:;">车展</a></li>
-                </ul>
-            </div>
-            <div class="back"><a href="javascript:;"></a></div>
+<div id="container">
+    <div id="header">
+        <h1>之家罗盘</h1>
+        <div class="nav">
+            <span class="nav-bar" id="insideClick">≡</span>
+            <ul id="insideMenu">
+                <li><a href="javascript:;">总览</a></li>
+                <li><a href="javascript:;">资讯</a></li>
+                <li><a href="financial.html">金融</a></li>
+                <li><a href="javascript:;">经销商</a></li>
+                <li><a href="javascript:;">电商</a></li>
+                <li class="active"><a href="javascript:;">二手车</a></li>
+                <li><a href="javascript:;">用户中心</a></li>
+                <li><a href="javascript:;">车展</a></li>
+            </ul>
         </div>
-        <div id="main">
-            <div class="row-left">
+        <div class="back"><a href="javascript:;"></a></div>
+    </div>
+    <div id="main">
+        <div class="left">
+            <div class="row-left-main">
                 <div class="row-left-top">
                     <ul>
-                        <li class="row-left-top-ul-first">
+                        <li class="active">
                             <h3>DAU</h3>
                             <p class="row-left-top-number" id="rowLeftTopNumber1"></p>
                             <p class="row-left-top-little">
                                 环比<span>6.54%</span><img src="assets/img/arrow_up.png">
                             </p>
-                            <div>
-                                
-                                <img src="assets/img/654477091187933548.png">
-                            </div>
                         </li>
-                        <li class="row-left-top-ul-second row-left-top-ul-third">
+                        <li>
                             <h3>C2线索</h3>
                             <p class="row-left-top-number " id="rowLeftTopNumber2"></p>
                             <p class="row-left-top-little">环比<span>10.59%</span><img src="assets/img/arrow_up.png"></p>
                         </li>
-                        <li class="row-left-top-ul-third">
+                        <li>
                             <h3>C1线索</h3>
                             <p class="row-left-top-number" id="rowLeftTopNumber3"></p>
                             <p class="row-left-top-little">环比<span>6.51%</span><img src="assets/img/arrow_down.png"></p>
                         </li>
-                        <li class="row-left-top-ul-second row-left-top-ul-third">
+                        <li>
                             <h3>在线车源</h3>
                             <p class="row-left-top-number" id="rowLeftTopNumber4"></p>
                             <p class="row-left-top-little">环比<span>6.51%</span><img src="assets/img/arrow_up.png"></p>
                         </li>
-                        <li class="row-left-top-ul-third">
+                        <li>
                             <h3>消耗量</h3>
                             <p class="row-left-top-number" id="rowLeftTopNumber5"></p>
                             <p class="row-left-top-little">环比<span>6.51%</span><img src="assets/img/arrow_up.png"></p>
@@ -83,41 +73,43 @@
                     </ul>
                 </div>
                 <div class="row-left-center">
-                    <div class="row-left-center-font" id="rowLeftCenterFont" style="display: none;">
-                        <div class="row-left-center-font-table-row">
-                            <div class="row-left-center-font-table-cell">
-                                <p class="row-left-center-font-p"  id="rowLeftCenterFontPFir">M端</p>
-                                <p id="rowLeftCenterFontPSec">20%</p>
+                    <div class="row-left-center-left">
+                        <div class="row-left-center-font" id="rowLeftCenterFont" style="display: none;">
+                            <div class="row-left-center-font-table-row">
+                                <div class="row-left-center-font-table-cell">
+                                    <p class="row-left-center-font-p" id="rowLeftCenterFontPFir">M端</p>
+                                    <p id="rowLeftCenterFontPSec">20%</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row-left-center-left" id="rowLeftCenterLeft">
-                                    
-
+                        <div class="rowLeftCenterFont" id="rowLeftCenterLeft">
+                        </div>
                     </div>
                     <div class="row-left-center-right">
                         <div id="row-left-center-right"></div>
                     </div>
                 </div>
-                <div class="row-left-buttom">
-                    <div class="row-left-buttom-first">
-                        <div class="title">C2线索转化率</div>
-                        <div id="row-left-buttom-first"></div>
-                    </div>
-                    <div class="row-left-buttom-second">
-                        <div class="title">C1线索来源</div>
-                        <div id="row-left-buttom-second"></div>
-                    </div>
-                    <div class="row-left-buttom-third">
-                        <div class="title">在售车源</div>
-                        <div id="row-left-buttom-third"></div>
-                    </div>
+            </div>
+            <div class="row-left-buttom">
+                <div class="panel row-left-buttom-first">
+                    <div class="head"><h2>C2线索转化率</h2></div>
+                    <div class="chart" id="row-left-buttom-first" style=""></div>
+                </div>
+                <div class="panel row-left-buttom-second">
+                    <div class="head"><h2>C1线索来源</h2></div>
+                    <div class="chart" id="row-left-buttom-second" style=""></div>
+                </div>
+                <div class="panel row-left-buttom-third">
+                    <div class="head"><h2>在售车源</h2></div>
+                    <div class="chart" id="row-left-buttom-third" style=""></div>
                 </div>
             </div>
+        </div>
 
-            <div class="row-right">
-                <div class="row-right-top">
-                    <p><span> &nbsp;</span>今日KPI完成度</p>
+        <div class="right">
+            <div class="row-right-top">
+                <div class="panel">
+                    <div class="head"><h2>今日KPI完成度</h2></div>
                     <ul>
                         <li>
                             <img src="assets/img/user.png">
@@ -133,7 +125,7 @@
                             <img src="assets/img/circular_c2.png">
                             <div>
                                 <p class="row-right-top-title">C2线索数</p>
-                                <p  class="row-right-top-context">
+                                <p class="row-right-top-context">
                                     <span class="row-right-top-context-number">104.0%</span>
                                     <span class="row-right-top-context-detial">超出4.0%</span>
                                 </p>
@@ -171,28 +163,26 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row-right-buttom">
-                        <div class="title">商家概览</div>
-                        <div id="row-right-buttom"></div>
+            </div>
+            <div class="row-right-buttom">
+                <div class="panel">
+                    <div class="head"><h2>商家概览</h2></div>
+                    <div class="chart" id="row-right-buttom" style=""></div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery_3.2.1/jquery_3.2.1.min.js"></script>
-    <script src="assets/js/jquery_3.2.1/jquery_3.2.1.js"></script>
-    <!-- <script src="http://libs.baidu.com/jquery/1.7.2/jquery.js"></script> -->
-    <script src="http://libs.baidu.com/underscore/1.3.3/underscore.js"></script>
-    <script src="assets/js/echarts.min.js"></script>
-    <script src="assets/js/shine.js"></script>
-    
-    <script src="assets/js/left-buttom-first.js"></script>
-    <script src="assets/js/left-buttom-second.js"></script>
-    <script src="assets/js/left-buttom-third.js"></script>
-<<<<<<< HEAD
-    <script src="assets/js/lineCharts.js"></script>
-=======
-    <script src="assets/js/animate.js"></script>
-    <script src="assets/js/usedcar.js"></script>
->>>>>>> d14beae6acbe74dbb9c94e9ecca31191237affb3
+</div>
+
+<!--<script src="http://libs.baidu.com/underscore/1.3.3/underscore.js"></script>-->
+<!--<script src="assets/js/shine.js"></script>-->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/echarts/dist/echarts.min.js"></script>
+<script src="assets/js/animate.js"></script>
+<script src="assets/js/left-buttom-first.js"></script>
+<!--<script src="assets/js/left-buttom-second.js"></script>-->
+<!--<script src="assets/js/left-buttom-third.js"></script>-->
+<!--<script src="assets/js/lineCharts.js"></script>-->
+<!--<script src="assets/js/usedcar.js"></script>-->
 </body>
 </html>
