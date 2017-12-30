@@ -1,8 +1,8 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
-    min-height: 800px;
+body{
+    background-image: url('../../assets/img/backgroud.png');
+}
+#header{
+    background-color:#181365;
 }
 
 .value {
@@ -46,7 +46,7 @@ body {
 }
 .left {
     width: 78.1%;
-    height: 100%;
+    /*height: 100%;*/
     flex-direction: column;
     justify-content: space-between;
 }
@@ -60,7 +60,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 19.46%;
-    height:100%;
+    /*height:100%;*/
 }
 
 .row-right-top,
@@ -146,11 +146,12 @@ body {
 }
 
 .row-left-top > ul > li {
-    border: 1px solid #1f37ae;
+    border: 1px solid #005cc3;
     border-radius: 6px;
     padding: .5em;
     width:19.32%;
     justify-content: space-between;
+    background: #120f44;
 }
 
 .row-left-center-left {
@@ -216,8 +217,10 @@ body {
     display: flex;
     width: 100%;
 }
-.row-right-buttom .panel{
+.row-right-buttom .panel,
+.row-left-buttom .panel{
     width: 100%;
+    height: 100%;
 }
 .row-right-buttom .title {
     position: relative;
@@ -618,11 +621,67 @@ body {
     #main {
         display: block;
         padding: 1.5em;
+        /*height: 100%;*/
+        min-height: 1000px;
+    }
+    #main,
+    .left,
+    .right,
+    .row-left-center,
+    .row-left-top > ul,
+    .row-left-buttom,
+    .row-left-center{
+        flex-direction:column;
     }
     .left,
     .right,
     .row-left-main,
-    .row-left-top > ul > li{
+    .row-left-top > ul > li,
+    .row-left-center-left,
+    .row-left-center-right,
+    .row-left-center-left,
+    .row-left-buttom-first,
+    .row-left-buttom-second,
+    .row-left-buttom-third{
         width: 100%;
+    }
+/*    .row-left-center-left,
+    .row-left-center-right{
+        min-height: 100px; !*可以修改*!
+    }*/
+    .left,
+    .row-left-top,
+    .row-left-center,
+    .row-left-main,
+    .row-left-buttom,
+    .row-right-buttom{
+        height: auto;
+    }
+    .row-left-top > ul > li{
+        min-height: 100px; /*可以修改*/
+        margin-bottom: 1.5em;
+    }
+    .row-left-buttom,
+    .row-left-center-left,
+    .row-left-center-right
+    {
+        margin-bottom: 1.5em;
+    }
+    #main > div.left,
+    #main > div.right,
+    .row-left-main,
+    .row-left-buttom,
+    .row-right-top
+    {
+        display: block;
+    }
+    .row-right-top ul{
+        position: static;
+        padding: 1em 0;
+    }
+    .chart,
+    .row-left-center-left,
+    .row-left-center-right{
+        min-height: 100px;
     }
 }
