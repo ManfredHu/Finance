@@ -3,7 +3,8 @@ let screen = document.body.clientWidth,
     fontSize,
     width,
     Size,
-    length;
+    length,
+    sum = 1000;
 // console.log(screen);
 if(screen > 2000) {
     fontSize = '36';
@@ -93,15 +94,15 @@ myChart.on('mouseover', function (params) {
         rowLeftCenterFontPFir = document.getElementById("rowLeftCenterFontPFir"),
         rowLeftCenterFontPSec = document.getElementById("rowLeftCenterFontPSec");
 
-    // rowLeftCenterFont.style.display = "table";
+    rowLeftCenterFont.style.display = "block";
     rowLeftCenterFontPFir.innerHTML = params.name;
-    rowLeftCenterFontPSec.innerHTML = params.data.value;
-    console.log(params.data);
+    rowLeftCenterFontPSec.innerHTML = (params.data.value/sum*100) + '%';
+    // console.log(params.data);
 });
 myChart.on('mouseout', function (params) {
     // console.log(params);
     let rowLeftCenterFont = document.getElementById("rowLeftCenterFont");
-    // rowLeftCenterFont.style.display = "none";
+    rowLeftCenterFont.style.display = "none";
 });
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
@@ -141,7 +142,7 @@ if(screen >= 1920 && screen <= 2560 && Height >= 1259) {
 } else {
     Size = 30;
 }
-
+// Size = 30;
 dataStatistics($('#rowLeftTopNumber1'), 1849398, Size, "valueActive");
 dataStatistics($('#rowLeftTopNumber2'), 32424, Size, "value");
 dataStatistics($('#rowLeftTopNumber3'), 4995, Size, "value");
