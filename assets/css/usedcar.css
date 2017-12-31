@@ -665,7 +665,7 @@ body{
     }
     .row-right-top ul{
         position: static;
-        padding: 1em 0;
+        padding: 3em 0 1em 0;
     }
     .chart,
     .row-left-center-left,
