@@ -1,13 +1,22 @@
 var leftbtChart = echarts.init(document.getElementById('row-left-buttom-third'));
+var splitNumber;
+
+if(screen < 800) {
+    splitNumber = 5;
+} else {
+    splitNumber = 8;
+}
+
 
 option = {
     legend: {
+        show: legendBoolean,
         bottom: '2%',
         itemWidth: 12,
         itemHeight: 6,
         textStyle: {
             color: 'rgba(255, 255, 255, .8)',
-            fontSize: '12',
+            fontSize: labelSize,
             fontWeight: 'lighter'
         },
         data: ['抢先开线索走势', '消费贷线索走势']
@@ -15,8 +24,8 @@ option = {
     grid: {
         left: '2%',
         right: '4%',
-        bottom: '13%',
-        top: '21%',
+        bottom: Buttom,
+        top: Top,
         containLabel: true,
         borderColor: 'rgb(102, 167, 255)',
     },
@@ -25,7 +34,7 @@ option = {
         // boundaryGap: false,
         axisLabel: {
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
             lineStyle: {
@@ -41,7 +50,7 @@ option = {
         type: 'value',
         min: 0,
         max: 3500,
-        splitNumber: '8',
+        splitNumber: splitNumber,
         splitLine: {
             show: true,
             interval: '1',
@@ -53,7 +62,7 @@ option = {
         axisLabel: {
 
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
             lineStyle: {
@@ -91,7 +100,8 @@ option = {
             }
         },
     ]
-
 };
+
+
 
 leftbtChart.setOption(option);

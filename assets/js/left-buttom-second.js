@@ -2,6 +2,7 @@ var leftbsChart = echarts.init(document.getElementById('row-left-buttom-second')
 
 option = {
 	legend: {
+        show: legendBoolean,
         bottom: '2%',
         itemWidth: 12,
         itemHeight: 6,
@@ -15,8 +16,8 @@ option = {
 	grid: {
         left: '2%',
         right: '4%',
-        bottom: '13%',
-        top: '22%',
+        bottom: Buttom,
+        top: Top,
         containLabel: true,
         borderColor: 'rgb(102, 167, 255)',
     },
@@ -25,7 +26,7 @@ option = {
         // boundaryGap: false,
         axisLabel: {
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
         	lineStyle: {
@@ -51,7 +52,7 @@ option = {
             formatter: '{value} 万',
             // align: 'left',
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
         	lineStyle: {
