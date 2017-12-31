@@ -93,7 +93,7 @@ myChart.on('mouseover', function (params) {
         rowLeftCenterFontPFir = document.getElementById("rowLeftCenterFontPFir"),
         rowLeftCenterFontPSec = document.getElementById("rowLeftCenterFontPSec");
 
-    rowLeftCenterFont.style.display = "table";
+    // rowLeftCenterFont.style.display = "table";
     rowLeftCenterFontPFir.innerHTML = params.name;
     rowLeftCenterFontPSec.innerHTML = params.data.value;
     console.log(params.data);
@@ -101,7 +101,7 @@ myChart.on('mouseover', function (params) {
 myChart.on('mouseout', function (params) {
     // console.log(params);
     let rowLeftCenterFont = document.getElementById("rowLeftCenterFont");
-    rowLeftCenterFont.style.display = "none";
+    // rowLeftCenterFont.style.display = "none";
 });
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);

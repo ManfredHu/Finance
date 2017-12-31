@@ -1,6 +1,9 @@
+
+
 body{
     background-image: url('../../assets/img/backgroud.png');
 }
+
 #header{
     background-color:#181365;
 }
@@ -156,30 +159,29 @@ body{
 
 .row-left-center-left {
     background: rgba(25,255,0,.1); /*test*/
+    position: relative;
 }
 .row-left-center-right {
     width: 71.88%;
     background: rgba(25,255,0,.1); /*test*/
 
 }
-.row-left-center-font {
-    display: table;
-    position: absolute;
-    width: 25%;
+.row-left-center-pie {
     height: 100%;
+    min-height: 100px;
+}
+.row-left-center-font {
+
+     position: absolute;
     font-size: 20px;
     text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-top: -31px;
+    margin-left: -40px;
 }
-.row-left-center-font-table-row {
-    display: table-row;
-}
-.row-left-center-font-table-cell {
-    display: table-cell;
 
-    vertical-align: middle;
 
-    color: #fff;
-}
 .row-left-center-font p {
     padding: 8px 20px;
 }
@@ -616,8 +618,14 @@ body{
 }
 
 /*end超宽4k屏*/
-
+@media screen and (min-width: 800px) {
+    html,
+    body {
+        height: 100%;
+    }
+}
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 800px) {
+    
     #main {
         display: block;
         padding: 1.5em;
