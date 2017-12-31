@@ -4,6 +4,10 @@ let screen = document.body.clientWidth,
     width,
     Size,
     length,
+    Buttom,
+    Top,
+    labelSize = 11;
+    legendBoolean = true;
     sum = 1000;
 // console.log(screen);
 var myChart = echarts.init(document.getElementById('rowLeftCenterLeft'), 'shine');
@@ -18,14 +22,26 @@ function paintPie(myChart) {
         fontSize = '36';
         width = 4;
         length = 30;
+        labelSize = 18;
+        Top = '20%';
+        Buttom = '13%';
+        legendBoolean = true;
     } else if (screen < 800) {
         fontSize = '10';
         width = 1;
         length = 7;
+        labelSize = 7;
+        Top = '31%';
+        Buttom = '5%';
+        legendBoolean = false;
     } else {
         fontSize = '14';
         width = 2;
         length = 15;
+        labelSize = 11; 
+        Top = '23%';
+        Buttom = '13%';
+        legendBoolean = true;
     }
 
 
@@ -163,10 +179,17 @@ function dataStatistics(target, value, rollY, active) {
 
 if (screen >= 1920 && screen <= 2560 && Height >= 1259) {
     Size = 45;
+    labelSize = 14;
+
 } else if (screen >= 2560) {
     Size = 60;
+    labelSize = 20;
 } else {
     Size = 30;
+    labelSize = 11;
+    if(screen < 800) {
+        labelSize = 7;
+    }
 }
 // Size = 30;
 dataStatistics($('#rowLeftTopNumber1'), 1849398, Size, "valueActive");
@@ -183,14 +206,26 @@ window.onresize = function() {
         fontSize = '36';
         width = 4;
         length = 30;
+        labelSize = 18;
+        legendBoolean = true;
+        Buttom = '13%';
+        Top = '23%';
     } else if (screen < 800) {
         fontSize = '10';
         width = 1;
         length = 7;
+        labelSize = 7;
+        legendBoolean = false;
+        Buttom = '5%';
+        Top = '31%';
     } else {
         fontSize = '14';
         width = 2;
         length = 15;
+        labelSize = 11;
+        legendBoolean = true;
+        Buttom = '13%';
+        Top = '23%';
     }
     //重新画图
     paintPie(myChart);

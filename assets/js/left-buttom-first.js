@@ -9,7 +9,7 @@ option = {
         left: '0.1%',
         right: '4%',
         bottom: '5%',
-        top: '23%',
+        top: Top,
         containLabel: true,
         borderColor: 'rgb(102, 167, 255)',
     },
@@ -18,7 +18,7 @@ option = {
         boundaryGap: false,
         axisLabel: {
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
         	lineStyle: {
@@ -44,7 +44,7 @@ option = {
             formatter: '{value} %',
             // align: 'left',
             color: 'rgb(102, 167, 255)',
-            fontSize: '11'
+            fontSize: labelSize
         },
         axisLine: {
         	lineStyle: {
