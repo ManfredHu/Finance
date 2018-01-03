@@ -230,8 +230,11 @@ window.onresize = function() {
     //重新画图
     paintPie(myChart);
     myChart.resize();
+    paintTransLine();
     leftbtChart.resize();
+    paintClueSouceBar();
     leftbsChart.resize();
+    paintSellingCarBar();
     leftbfChart.resize();
     myRightBottomLineChart.resize();
     myCenterLineChart.resize();
