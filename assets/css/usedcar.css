@@ -598,7 +598,7 @@ body{
 }
 
 /*end超宽4k屏*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1400px) and (min-height: 800px) {
     html,
     body {
         height: 100%;
@@ -666,7 +666,7 @@ body{
     }
     .row-right-top ul{
         position: static;
-        padding: 1em 0;
+        padding: 3em 0 1em 0;
     }
     .chart,
     .row-left-center-left,
