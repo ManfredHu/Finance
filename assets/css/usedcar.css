@@ -158,12 +158,14 @@ body{
 }
 
 .row-left-center-left {
-    background: rgba(25,255,0,.1); /*test*/
+    /*test*/
+    /*background: rgba(25,255,0,.1);*/
     position: relative;
 }
 .row-left-center-right {
     width: 71.88%;
-    background: rgba(25,255,0,.1); /*test*/
+    /*test*/
+    /*background: rgba(25,255,0,.1);*/
 
 }
 .row-left-center-pie {
