@@ -683,9 +683,6 @@ body{
     .row-left-center-font p {
          padding: 0; 
     }
-    #row-left-center-right {
-        min-height: 100px;
-    }
     .panel .head h2 {
         font-size: 10px;
     }

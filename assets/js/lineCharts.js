@@ -1,3 +1,14 @@
+var lineChartCenterLeft = '-5%';
+var lineChartCenterRight = '2%';
+var lineChartCenterBottom = '26';
+
+//手机,ipad调解高度
+if(screen < 800){
+    var lineChartCenterHeight = parseInt(screen/2);
+    $('.row-left-center-right').css('height', lineChartCenterHeight + 'px');
+}
+
+//--------------------------
 var myCenterLineChart = echarts.init(document.getElementById('row-left-center-right'));
 var myRightBottomLineChart = echarts.init(document.getElementById('row-right-buttom'));
 var option = {
@@ -62,9 +73,9 @@ var option = {
         }
     },
     grid: {
-        left: '-5%',
-        right: '2%',
-        bottom: '26',
+        left: lineChartCenterLeft,
+        right: lineChartCenterRight,
+        bottom: lineChartCenterBottom,
         containLabel: true //grid 区域是否包含坐标轴的刻度标签
     },
     xAxis: [{
