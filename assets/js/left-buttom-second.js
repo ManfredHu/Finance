@@ -1,6 +1,13 @@
 var leftbsChart = echarts.init(document.getElementById('row-left-buttom-second'));
+var itemGap;
+
 
 function paintClueSouceBar() {
+    if(screen < 1519) {
+        itemGap = 2;
+    } else {
+        itemGap = 10;
+    }
 
     option = {
     	legend: {
@@ -8,6 +15,7 @@ function paintClueSouceBar() {
             bottom: '2%',
             itemWidth: 12,
             itemHeight: 6,
+            itemGap: itemGap,
             textStyle: {
                 color: 'rgba(255, 255, 255, .8)',
                 fontSize: '12',

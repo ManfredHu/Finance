@@ -8,8 +8,8 @@ function paintTransLine() {
     	// 	// borderWidth: '1'
     	// },
     	grid: {
-            left: '0.1%',
-            right: '4%',
+            left: '1%',
+            right: '6%',
             bottom: '5%',
             top: Top,
             containLabel: true,
