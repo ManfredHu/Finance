@@ -215,7 +215,7 @@ body{
 #row-left-center-right{
     margin:0;
     width: 100%;
-    height: 100%;
+    height: 85%;
 }
 
 .row-right-buttom{
@@ -686,4 +686,101 @@ body{
     .panel .head h2 {
         font-size: 10px;
     }
+}
+
+
+
+/*中间折线图样式*/
+.tool-box-wrapper{
+    /*display: none;*/
+    width: 100%;
+    height: 12%;
+    /*border:dashed 1px white;*/
+}
+    .tool-box {
+        /*border: dashed white 1px;*/
+        width:27%;
+        height: 100%;
+    }
+    .icons {
+        z-index: 1000;
+        height:100%;
+        width: 18%;
+        /*border: dashed white 1px;*/
+        margin-left: 2%;
+        background-size:100%;
+        float: left;
+        cursor: pointer;
+        background-repeat: no-repeat;
+    }
+
+    .all {
+        background-image: url(../img/all_normal.png);
+    }
+
+    .all:hover {
+        background-image: url(../img/all.png);
+    }
+
+    .pc {
+        background-image: url(../img/PC.png);
+    }
+
+    .pc:hover {
+        background-image: url(../img/PC_press.png);
+    }
+
+    .app {
+        background-image: url(../img/APP.png);
+    }
+
+    .app:hover {
+        background-image: url(../img/APP_press.png);
+    }
+
+    .mEnd {
+        background-image: url(../img/M.png);
+    }
+
+    .mEnd:hover {
+        background-image: url(../img/Mside_press.png);
+    }
+
+    .Embedded {
+        background-image: url(../img/embed.png);
+    }
+
+    .Embedded:hover {
+        background-image: url(../img/embed_press.png);
+    }
+/*the right icons group start*/
+.recent{
+    background-image: url(../img/zuijin.png);
+}
+.twenty-hours{
+    background-image: url(../img/24h_normal.png);
+}
+.twenty-hours:hover{
+    background-image: url(../img/24_h.png);
+}
+.seven-days{
+    background-image: url(../img/7_day.png);
+}
+.seven-days:hover{
+        background-image: url(../img/7day_press.png);
+    
+}
+.thirty-days{
+        background-image: url(../img/30_day.png);
+
+}
+.thirty-days:hover{
+        background-image: url(../img/30day_press.png);
+
+}
+.one-year{
+    background-image: url(../img/one_year.png);
+}
+.one-year:hover{
+    background-image: url(../img/oneyear_press.png);
 }

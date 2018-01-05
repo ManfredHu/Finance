@@ -237,8 +237,9 @@ window.onresize = function() {
     paintSellingCarBar();
     leftbfChart.resize();
     myRightBottomLineChart.resize();
+    paintRightBottomLineChart();
     myCenterLineChart.resize();
-
+    paintCenterLineChart();
     //重新设置滚动数字
     if (screen >= 1920 && screen <= 2560 && Height >= 1259) {
         Size = 45;
