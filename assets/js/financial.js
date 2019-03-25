@@ -1,8 +1,4 @@
 'use strict';
-/* =================================
- * 之家罗盘 - 金融
- * Created by WangPing on 2017-12-06.
- * ================================= */
 Date.prototype.format = function (fmt) {
 	var o = {
 		'M+': this.getMonth() + 1,
